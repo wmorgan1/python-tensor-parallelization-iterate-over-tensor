@@ -87,9 +87,23 @@ class Tensor:
 
 
 
+    # Getter got numDims
+    def GetnumDims(self):
+        return self.numDims
+
+
     # resize the tensor based upon (assumed) updated self.x/y/z
     # this will clear the data in the tensor
-    def resize():
+    def resize(self):
         self.t = [ [ [ None for z in self.z ] for y in self.y ] for x in self.x ]
 
+        return
+
+
+
+    # Sets value at specified index
+    # c: list containing index, e.g. c[0] = x, c[1] = y, c[2] = z
+    # val: value to set
+    def setIndex(self, c, val):
+        self.t[c[0]][c[1]][c[2]] = val
         return
